@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cf7jmtnws6lmb"]
+
+[ext_resource type="Script" uid="uid://bbxgsqy18lhun" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://qt4of53qprll" path="res://assets/UI Chalk/UI_Button_Chalk-17.png" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://f0t0f42r16l" path="res://assets/UI Chalk/UI_Button_Chalk-2.png" id="3_glbon"]
+[ext_resource type="Texture2D" uid="uid://cn631n2n5pnyr" path="res://assets/UI Chalk/UI_Button_Chalk-11.png" id="4_nlkkf"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qe12f"]
+load_path = "res://.godot/imported/UI_Button_Chalk-17.png-70b1ec80684f09cd222b92eb90061cb4.ctex"
+
+[node name="Main Menu" type="Node2D" unique_id=469634825]
+script = ExtResource("1_06t4h")
+
+[node name="Button_manager" type="Control" parent="." unique_id=2121978434]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="TextureButton" parent="Button_manager" unique_id=966121635]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 786.0
+offset_right = 1049.0
+offset_bottom = 963.0
+texture_normal = SubResource("CompressedTexture2D_qe12f")
+texture_hover = ExtResource("2_jix8l")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Options" type="TextureButton" parent="Button_manager" unique_id=1945406160]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 768.0
+offset_right = 804.0
+offset_bottom = 942.0
+texture_normal = ExtResource("3_glbon")
+texture_hover = ExtResource("3_glbon")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Quit" type="TextureButton" parent="Button_manager" unique_id=1094869677]
+layout_mode = 0
+offset_left = 1113.0
+offset_top = 774.0
+offset_right = 1287.0
+offset_bottom = 951.0
+texture_normal = ExtResource("4_nlkkf")
+texture_hover = ExtResource("4_nlkkf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
