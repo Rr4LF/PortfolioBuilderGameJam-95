@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dgu64d7msumjx"]
+
+[ext_resource type="AudioStream" uid="uid://csmljofp8ifer" path="res://assets/music/good_b_music-simple-piano-melody-9834.mp3" id="1_nbeep"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=601703007]
+stream = ExtResource("1_nbeep")
+autoplay = true
+bus = &"Music"
