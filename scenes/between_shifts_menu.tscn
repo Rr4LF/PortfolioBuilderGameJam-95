@@ -23,3 +23,5 @@ texture_pressed = ExtResource("2_dj0l6")
 texture_hover = ExtResource("2_dj0l6")
 ignore_texture_size = true
 stretch_mode = 0
+
+[connection signal="pressed" from="button_manager/back_button" to="." method="_on_back_button_pressed"]

@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://bpb3ljaix564j"]
 
+[ext_resource type="Script" uid="uid://pcd7gxt3tdsf" path="res://scripts/game.gd" id="1_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://c8vm8r83uuot7" path="res://assets/UI Chalk/UI_Button_Chalk-16.png" id="2_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://f0t0f42r16l" path="res://assets/UI Chalk/UI_Button_Chalk-2.png" id="2_lnu2h"]
+
 [node name="game" type="Node2D" unique_id=1119949611]
+script = ExtResource("1_lnu2h")
 
 [node name="button_manager" type="Control" parent="." unique_id=1508622590]
 layout_mode = 3
@@ -10,10 +15,25 @@ offset_bottom = 40.0
 
 [node name="main_menu" type="TextureButton" parent="button_manager" unique_id=625454958]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 413.0
+offset_top = 246.0
+offset_right = 596.0
+offset_bottom = 419.0
+texture_normal = ExtResource("2_lbhrr")
+texture_pressed = ExtResource("2_lbhrr")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="settings" type="TextureButton" parent="button_manager" unique_id=439193236]
+[node name="options" type="TextureButton" parent="button_manager" unique_id=107981320]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 36.0
+offset_top = 42.0
+offset_right = 142.0
+offset_bottom = 150.0
+texture_normal = ExtResource("2_lnu2h")
+texture_hover = ExtResource("2_lnu2h")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="button_manager/main_menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="button_manager/options" to="." method="_on_options_pressed"]

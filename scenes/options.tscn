@@ -1,3 +1,27 @@
 [gd_scene format=3 uid="uid://bq24m8j3plq4v"]
 
+[ext_resource type="Script" uid="uid://bqnl43o3gyq76" path="res://scripts/options.gd" id="1_yjkok"]
+[ext_resource type="Texture2D" uid="uid://baemiofsdibr5" path="res://assets/main_menu/back.png" id="2_2iy26"]
+
 [node name="Options" type="Node2D" unique_id=1850309680]
+script = ExtResource("1_yjkok")
+
+[node name="button_manager" type="Control" parent="." unique_id=1152791666]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="back_button" type="TextureButton" parent="button_manager" unique_id=625961371]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 23.0
+offset_right = 153.0
+offset_bottom = 100.0
+texture_normal = ExtResource("2_2iy26")
+texture_pressed = ExtResource("2_2iy26")
+texture_hover = ExtResource("2_2iy26")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="button_manager/back_button" to="." method="_on_back_button_pressed"]
