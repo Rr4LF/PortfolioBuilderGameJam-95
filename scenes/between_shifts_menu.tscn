@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://biya1c7cyk8jm"]
+
+[ext_resource type="Script" uid="uid://b2lwtgoyxskre" path="res://scripts/between_shifts_menu.gd" id="1_l6ufw"]
+
+[node name="between_shifts_menu" type="Node2D" unique_id=1021784705]
+script = ExtResource("1_l6ufw")
