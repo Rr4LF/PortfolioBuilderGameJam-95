@@ -3,16 +3,18 @@
 [ext_resource type="Script" uid="uid://bbxgsqy18lhun" path="res://scripts/main_menu.gd" id="1_8ln24"]
 [ext_resource type="Texture2D" uid="uid://cduwgd72l31lw" path="res://assets/main_menu/play.png" id="2_lgwnu"]
 [ext_resource type="Texture2D" uid="uid://bvh8qclvfjans" path="res://assets/main_menu/play_pressed.png" id="3_flqon"]
-[ext_resource type="Texture2D" uid="uid://f0t0f42r16l" path="res://assets/UI Chalk/UI_Button_Chalk-2.png" id="3_oa1go"]
 [ext_resource type="Texture2D" uid="uid://ct16v4ibyt26q" path="res://assets/main_menu/play_hover.png" id="4_rcqid"]
+[ext_resource type="Texture2D" uid="uid://bnrad23rfs3mo" path="res://assets/main_menu/options.png" id="5_7b55j"]
 [ext_resource type="Script" uid="uid://d36pomoyxdyqd" path="res://scripts/link_button_Rr4lF.gd" id="5_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://ci2uyvhqhantm" path="res://assets/main_menu/options_pressed.png" id="6_5pajh"]
 [ext_resource type="Texture2D" uid="uid://b6cj8y1c4v0it" path="res://assets/main_menu/unmuted.png" id="6_jk1qb"]
 [ext_resource type="Texture2D" uid="uid://bvrtmmdl48w84" path="res://assets/main_menu/close.png" id="6_rcqid"]
 [ext_resource type="Texture2D" uid="uid://bid7l3llplpkj" path="res://assets/main_menu/close_pressed.png" id="7_1ajci"]
-[ext_resource type="Texture2D" uid="uid://3gyaw46nryml" path="res://assets/main_menu/unmuted_pressed.png" id="7_5dd4i"]
+[ext_resource type="Texture2D" uid="uid://rg2p51r4yq77" path="res://assets/main_menu/unmuted_pressed.png" id="7_5dd4i"]
+[ext_resource type="Texture2D" uid="uid://brynoxu7f5x4m" path="res://assets/main_menu/options_hover.png" id="7_j7ex8"]
 [ext_resource type="Script" uid="uid://dbedgdkyxirul" path="res://scenes/toggle_sound.gd" id="8_5dd4i"]
 [ext_resource type="Texture2D" uid="uid://dt14u2qq5nyep" path="res://assets/main_menu/close_hover.png" id="8_7b55j"]
-[ext_resource type="Texture2D" uid="uid://du7etgal5gkbr" path="res://assets/main_menu/unmuted_hover.png" id="8_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://durv38ywn5orm" path="res://assets/main_menu/unmuted_hover.png" id="8_lgwnu"]
 
 [node name="Main Menu" type="Node2D" unique_id=469634825]
 script = ExtResource("1_8ln24")
@@ -38,11 +40,12 @@ stretch_mode = 0
 [node name="options" type="TextureButton" parent="Button_manager" unique_id=1945406160]
 layout_mode = 0
 offset_left = 17.0
-offset_top = 13.0
+offset_top = 15.0
 offset_right = 123.0
-offset_bottom = 121.0
-texture_normal = ExtResource("3_oa1go")
-texture_hover = ExtResource("3_oa1go")
+offset_bottom = 123.0
+texture_normal = ExtResource("5_7b55j")
+texture_pressed = ExtResource("6_5pajh")
+texture_hover = ExtResource("7_j7ex8")
 ignore_texture_size = true
 stretch_mode = 0
 
