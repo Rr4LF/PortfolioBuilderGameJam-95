@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://cf7jmtnws6lmb"]
 
 [ext_resource type="Script" uid="uid://bbxgsqy18lhun" path="res://scripts/main_menu.gd" id="1_8ln24"]
-[ext_resource type="Texture2D" uid="uid://qt4of53qprll" path="res://assets/UI Chalk/UI_Button_Chalk-17.png" id="2_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://cduwgd72l31lw" path="res://assets/main_menu/play.png" id="2_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://bvh8qclvfjans" path="res://assets/main_menu/play_pressed.png" id="3_flqon"]
 [ext_resource type="Texture2D" uid="uid://f0t0f42r16l" path="res://assets/UI Chalk/UI_Button_Chalk-2.png" id="3_oa1go"]
+[ext_resource type="Texture2D" uid="uid://ct16v4ibyt26q" path="res://assets/main_menu/play_hover.png" id="4_rcqid"]
 [ext_resource type="Texture2D" uid="uid://cn631n2n5pnyr" path="res://assets/UI Chalk/UI_Button_Chalk-11.png" id="4_tbmy8"]
 [ext_resource type="Script" uid="uid://d36pomoyxdyqd" path="res://scripts/link_button_Rr4lF.gd" id="5_rtw2f"]
-[ext_resource type="Texture2D" uid="uid://bees2xyro7yv0" path="res://assets/UI Chalk/UI_Button_Chalk-3.png" id="6_tbmy8"]
-[ext_resource type="Texture2D" uid="uid://dnorkxch44pen" path="res://assets/UI Chalk/UI_Button_Chalk-4.png" id="7_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://b6cj8y1c4v0it" path="res://assets/main_menu/unmuted.png" id="6_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://3gyaw46nryml" path="res://assets/main_menu/unmuted_pressed.png" id="7_5dd4i"]
 [ext_resource type="Script" uid="uid://dbedgdkyxirul" path="res://scenes/toggle_sound.gd" id="8_5dd4i"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qe12f"]
-load_path = "res://.godot/imported/UI_Button_Chalk-17.png-70b1ec80684f09cd222b92eb90061cb4.ctex"
+[ext_resource type="Texture2D" uid="uid://du7etgal5gkbr" path="res://assets/main_menu/unmuted_hover.png" id="8_lgwnu"]
 
 [node name="Main Menu" type="Node2D" unique_id=469634825]
 script = ExtResource("1_8ln24")
@@ -23,12 +23,13 @@ offset_bottom = 40.0
 
 [node name="start" type="TextureButton" parent="Button_manager" unique_id=966121635]
 layout_mode = 0
-offset_left = 585.0
-offset_top = 517.0
-offset_right = 710.0
-offset_bottom = 647.0
-texture_normal = SubResource("CompressedTexture2D_qe12f")
-texture_hover = ExtResource("2_rtw2f")
+offset_left = 534.0
+offset_top = 448.0
+offset_right = 728.0
+offset_bottom = 635.0
+texture_normal = ExtResource("2_lgwnu")
+texture_pressed = ExtResource("3_flqon")
+texture_hover = ExtResource("4_rcqid")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -84,9 +85,9 @@ offset_left = 116.0
 offset_top = 2.0
 offset_right = 220.0
 offset_bottom = 109.0
-texture_normal = ExtResource("6_tbmy8")
-texture_pressed = ExtResource("7_jk1qb")
-texture_hover = ExtResource("7_jk1qb")
+texture_normal = ExtResource("6_jk1qb")
+texture_pressed = ExtResource("7_5dd4i")
+texture_hover = ExtResource("8_lgwnu")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_5dd4i")
