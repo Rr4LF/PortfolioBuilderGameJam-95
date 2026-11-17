@@ -1,6 +1,25 @@
 [gd_scene format=3 uid="uid://biya1c7cyk8jm"]
 
 [ext_resource type="Script" uid="uid://b2lwtgoyxskre" path="res://scripts/between_shifts_menu.gd" id="1_l6ufw"]
+[ext_resource type="Texture2D" uid="uid://baemiofsdibr5" path="res://assets/main_menu/back.png" id="2_dj0l6"]
 
 [node name="between_shifts_menu" type="Node2D" unique_id=1021784705]
 script = ExtResource("1_l6ufw")
+
+[node name="button_manager" type="Control" parent="." unique_id=720751791]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="back_button" type="TextureButton" parent="button_manager" unique_id=1446559614]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 17.0
+offset_right = 141.0
+offset_bottom = 100.0
+texture_normal = ExtResource("2_dj0l6")
+texture_pressed = ExtResource("2_dj0l6")
+texture_hover = ExtResource("2_dj0l6")
+ignore_texture_size = true
+stretch_mode = 0

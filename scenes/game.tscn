@@ -1,3 +1,19 @@
 [gd_scene format=3 uid="uid://bpb3ljaix564j"]
 
 [node name="game" type="Node2D" unique_id=1119949611]
+
+[node name="button_manager" type="Control" parent="." unique_id=1508622590]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="main_menu" type="TextureButton" parent="button_manager" unique_id=625454958]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="settings" type="TextureButton" parent="button_manager" unique_id=439193236]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
