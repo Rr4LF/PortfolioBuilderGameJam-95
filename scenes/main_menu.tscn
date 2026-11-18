@@ -1,9 +1,6 @@
 [gd_scene format=3 uid="uid://cf7jmtnws6lmb"]
 
 [ext_resource type="Script" uid="uid://bbxgsqy18lhun" path="res://scripts/main_menu.gd" id="1_8ln24"]
-[ext_resource type="Texture2D" uid="uid://cduwgd72l31lw" path="res://assets/main_menu/play.png" id="2_lgwnu"]
-[ext_resource type="Texture2D" uid="uid://bvh8qclvfjans" path="res://assets/main_menu/play_pressed.png" id="3_flqon"]
-[ext_resource type="Texture2D" uid="uid://ct16v4ibyt26q" path="res://assets/main_menu/play_hover.png" id="4_rcqid"]
 [ext_resource type="Texture2D" uid="uid://bnrad23rfs3mo" path="res://assets/main_menu/options.png" id="5_7b55j"]
 [ext_resource type="Script" uid="uid://d36pomoyxdyqd" path="res://scripts/link_button_Rr4lF.gd" id="5_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://ci2uyvhqhantm" path="res://assets/main_menu/options_pressed.png" id="6_5pajh"]
@@ -15,6 +12,10 @@
 [ext_resource type="Script" uid="uid://dbedgdkyxirul" path="res://scenes/toggle_sound.gd" id="8_5dd4i"]
 [ext_resource type="Texture2D" uid="uid://dt14u2qq5nyep" path="res://assets/main_menu/close_hover.png" id="8_7b55j"]
 [ext_resource type="Texture2D" uid="uid://durv38ywn5orm" path="res://assets/main_menu/unmuted_hover.png" id="8_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://ject40ja64ul" path="res://assets/main_menu/bg main menuB.png" id="15_j7ex8"]
+[ext_resource type="Texture2D" uid="uid://h3hhk8qop3mm" path="res://assets/main_menu/door_main_hover.png" id="16_5pajh"]
+[ext_resource type="Script" uid="uid://fgumpkhllrnq" path="res://scenes/bg.gd" id="17_a8gd2"]
+[ext_resource type="FontFile" uid="uid://dg51bhna3oedg" path="res://assets/fonts/Pulang.otf" id="17_hstxw"]
 
 [node name="Main Menu" type="Node2D" unique_id=469634825]
 script = ExtResource("1_8ln24")
@@ -24,19 +25,6 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
-
-[node name="start" type="TextureButton" parent="Button_manager" unique_id=966121635]
-layout_mode = 0
-offset_left = 534.0
-offset_top = 441.0
-offset_right = 740.0
-offset_bottom = 646.0
-texture_normal = ExtResource("2_lgwnu")
-texture_pressed = ExtResource("3_flqon")
-texture_hover = ExtResource("4_rcqid")
-ignore_texture_size = true
-stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="options" type="TextureButton" parent="Button_manager" unique_id=1945406160]
@@ -65,32 +53,6 @@ ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="link_button_Rr4lF" type="LinkButton" parent="Button_manager" unique_id=1120280747]
-layout_mode = 0
-offset_left = 1065.0
-offset_top = 651.0
-offset_right = 1269.0
-offset_bottom = 704.0
-theme_override_font_sizes/font_size = 38
-text = "More Rr4lF"
-underline = 1
-uri = "https://bsky.app/profile/rr4lf.bsky.social"
-script = ExtResource("5_rtw2f")
-metadata/_edit_use_anchors_ = true
-
-[node name="link_button_asteriskish" type="LinkButton" parent="Button_manager" unique_id=207453359]
-layout_mode = 0
-offset_left = 1063.0
-offset_top = 587.0
-offset_right = 1267.0
-offset_bottom = 640.0
-theme_override_font_sizes/font_size = 38
-text = "More aster"
-underline = 1
-uri = "https://bsky.app/profile/rr4lf.bsky.social"
-script = ExtResource("5_rtw2f")
-metadata/_edit_use_anchors_ = true
-
 [node name="toggle_sound" type="TextureButton" parent="Button_manager" unique_id=114002198]
 layout_mode = 1
 anchors_preset = -1
@@ -108,7 +70,75 @@ stretch_mode = 0
 script = ExtResource("8_5dd4i")
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Button_manager/start" to="." method="_on_start_pressed"]
+[node name="bg" type="Sprite2D" parent="." unique_id=737842910]
+z_index = -10
+position = Vector2(679, 489)
+scale = Vector2(0.4665731, 0.46657315)
+texture = ExtResource("15_j7ex8")
+script = ExtResource("17_a8gd2")
+
+[node name="credits" type="Label" parent="bg" unique_id=1896370873]
+offset_left = 267.91086
+offset_top = -126.453896
+offset_right = 477.91086
+offset_bottom = -54.453896
+theme_override_colors/font_color = Color(0.99607843, 0.8745098, 0.72156864, 1)
+theme_override_fonts/font = ExtResource("17_hstxw")
+theme_override_font_sizes/font_size = 49
+text = "More on"
+
+[node name="credits" type="Label" parent="bg/credits" unique_id=2018816636]
+layout_mode = 0
+offset_left = 107.16436
+offset_top = 147.8868
+offset_right = 169.31976
+offset_bottom = 219.8868
+theme_override_colors/font_color = Color(0.99607843, 0.8745098, 0.72156864, 1)
+theme_override_fonts/font = ExtResource("17_hstxw")
+theme_override_font_sizes/font_size = 49
+text = "&"
+
+[node name="link_button_asteriskish" type="LinkButton" parent="bg" unique_id=207453359]
+offset_left = 297.91687
+offset_top = -70.72849
+offset_right = 501.91687
+offset_bottom = 25.271507
+theme_override_colors/font_color = Color(0.99607843, 0.8745098, 0.72156864, 1)
+theme_override_fonts/font = ExtResource("17_hstxw")
+theme_override_font_sizes/font_size = 70
+text = "aster"
+underline = 1
+uri = "https://bsky.app/profile/rr4lf.bsky.social"
+script = ExtResource("5_rtw2f")
+metadata/_edit_use_anchors_ = true
+
+[node name="link_button_Rr4lF" type="LinkButton" parent="bg" unique_id=1120280747]
+offset_left = 330.06616
+offset_top = 75.01503
+offset_right = 534.06616
+offset_bottom = 172.01503
+theme_override_colors/font_color = Color(0.99761885, 0.8732259, 0.722715, 1)
+theme_override_fonts/font = ExtResource("17_hstxw")
+theme_override_font_sizes/font_size = 71
+text = "Rr4lF"
+underline = 1
+uri = "https://bsky.app/profile/rr4lf.bsky.social"
+script = ExtResource("5_rtw2f")
+metadata/_edit_use_anchors_ = true
+
+[node name="start" type="TextureButton" parent="bg" unique_id=966121635]
+anchors_preset = -1
+anchor_right = 0.055372562
+anchor_bottom = 0.1984159
+offset_left = 672.99207
+offset_top = -548.68164
+offset_right = 889.62244
+offset_bottom = -126.990295
+texture_hover = ExtResource("16_5pajh")
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="Button_manager/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Button_manager/quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Button_manager/toggle_sound" to="Button_manager/toggle_sound" method="_on_pressed"]
+[connection signal="pressed" from="bg/start" to="." method="_on_start_pressed"]
