@@ -14,35 +14,41 @@ script = ExtResource("1_spx6g")
 [node name="card_bg" type="TextureRect" parent="." unique_id=1675100574]
 custom_maximum_size = Vector2(200, 250)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 167.0
+offset_top = 36.0
+offset_right = 282.0
+offset_bottom = 166.0
 texture = ExtResource("1_3tod1")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="title" type="Label" parent="." unique_id=161973430]
 layout_mode = 0
-offset_left = 87.0
-offset_top = 78.0
-offset_right = 136.0
-offset_bottom = 90.0
+offset_left = 202.0
+offset_top = 60.0
+offset_right = 251.0
+offset_bottom = 72.0
 theme_override_font_sizes/font_size = 8
 text = "lorem ipsum"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="card_art" type="TextureRect" parent="." unique_id=1720420690]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 14.0
-offset_right = 31.0
-offset_bottom = 34.0
+offset_left = 192.0
+offset_top = 80.0
+offset_right = 259.0
+offset_bottom = 140.0
 expand_mode = 1
 stretch_mode = 5
 
 [node name="card_cost" type="Label" parent="." unique_id=1368011744]
 layout_mode = 0
-offset_left = 73.0
-offset_top = 15.0
-offset_right = 188.0
-offset_bottom = 43.0
+offset_left = 198.0
+offset_top = 40.0
+offset_right = 252.0
+offset_bottom = 54.0
 theme_override_font_sizes/font_size = 9
 text = "Placeholder"
+horizontal_alignment = 1
+vertical_alignment = 1

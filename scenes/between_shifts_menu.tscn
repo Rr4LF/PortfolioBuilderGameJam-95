@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b2lwtgoyxskre" path="res://scripts/between_shifts_menu.gd" id="1_l6ufw"]
 [ext_resource type="Texture2D" uid="uid://baemiofsdibr5" path="res://assets/main_menu/back.png" id="2_dj0l6"]
 [ext_resource type="Texture2D" uid="uid://0wvm7fdiq1d6" path="res://assets/between_shifts (cheesemaking)/UI/frame.png" id="3_tsr06"]
+[ext_resource type="Texture2D" uid="uid://d3iei0k3dy6m0" path="res://assets/between_shifts (cheesemaking)/UI/energy.png" id="4_fq5ur"]
 
 [node name="between_shifts_menu" type="Control" unique_id=896954391]
 layout_mode = 3
@@ -29,10 +30,10 @@ stretch_mode = 0
 [node name="between_shifts_bg" type="ColorRect" parent="." unique_id=4050300]
 z_index = -4096
 layout_mode = 0
-offset_left = -64.0
-offset_top = -43.0
-offset_right = 1339.0
-offset_bottom = 786.0
+offset_left = -58.0
+offset_top = -42.0
+offset_right = 1345.0
+offset_bottom = 787.0
 color = Color(0.0016140813, 0.027775723, 0.0947412, 1)
 
 [node name="cheese_menu_frame" type="Sprite2D" parent="." unique_id=335525570]
@@ -47,5 +48,13 @@ offset_left = 329.0
 offset_top = 117.0
 offset_right = 890.0
 offset_bottom = 673.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="card_container" unique_id=764804719]
+layout_mode = 2
+
+[node name="total_energy" type="Sprite2D" parent="." unique_id=1457996976]
+position = Vector2(79, 309)
+scale = Vector2(0.7314815, 0.6908397)
+texture = ExtResource("4_fq5ur")
 
 [connection signal="pressed" from="button_manager/back_button" to="." method="_on_back_button_pressed"]

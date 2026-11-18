@@ -1,21 +1,11 @@
 extends Control
 
-#Back button that leads back to main menu
+##Back button that leads back to main menu
 func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 const CHEESE_CARD_SCENE = preload("res://scenes/cheese_card.tscn")
 @onready var card_container: ScrollContainer = $card_container
-
-#blue cheese
-#brie cheese
-# cottage
-# fresh
-# goat
-# gouda
-# mozarella
-# pepperjack
-#swiss cheese
 
 ## Dictionary containing all available cheeses
 var cheese_menu: Array[Dictionary] = [
@@ -28,6 +18,51 @@ var cheese_menu: Array[Dictionary] = [
 		"title": "Asiago Cheese",
 		"cost": 5,
 		"texture": preload("res://assets/between_shifts (cheesemaking)/Cheeses/mini_asiagocheese.png")
+	},
+	{
+		"title": "Blue Cheese",
+		"cost": 5,
+		"texture": preload("res://assets/between_shifts (cheesemaking)/Cheeses/mini_bluecheese.png")
+	},
+	{
+		"title": "Brie Cheese",
+		"cost": 5,
+		"texture": preload("res://assets/between_shifts (cheesemaking)/Cheeses/mini_briecheese.png")
+	},
+	{
+		"title": "Cottage Cheese",
+		"cost": 6,
+		"texture": preload("res://assets/between_shifts (cheesemaking)/Cheeses/mini_cottagecheese.png")
+	},
+	{
+		"title": "Fresh Cheese",
+		"cost": 6,
+		"texture": preload("res://assets/between_shifts (cheesemaking)/Cheeses/mini_freshcheese.png")
+	},
+	{
+		"title": "Goat Cheese",
+		"cost": 6,
+		"texture": preload("res://assets/between_shifts (cheesemaking)/Cheeses/mini_goatcheese.png")
+	},
+	{
+		"title": "Gouda Cheese",
+		"cost": 6,
+		"texture": preload("res://assets/between_shifts (cheesemaking)/Cheeses/mini_goudacheese.png")
+	},
+	{
+		"title": "Mozarella",
+		"cost": 9,
+		"texture": preload("res://assets/between_shifts (cheesemaking)/Cheeses/mini_mozarella.png")
+	},
+	{
+		"title": "Pepperjack Cheese",
+		"cost": 8,
+		"texture": preload("res://assets/between_shifts (cheesemaking)/Cheeses/mini_pepperjackcheese.png")
+	},
+	{
+		"title": "Swiss Cheese",
+		"cost": 8,
+		"texture": preload("res://assets/between_shifts (cheesemaking)/Cheeses/mini_swisscheese.png")
 	}
 ]
 
