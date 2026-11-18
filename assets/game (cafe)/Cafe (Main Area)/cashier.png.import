@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b75737ayjc1fb"
-path="res://.godot/imported/floor.png-e05e6670e74b7e112bcb4415a3e51b30.ctex"
+uid="uid://c8udnigvd735x"
+path="res://.godot/imported/cashier.png-11768e619db222827541470eb961b602.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/during_shift (cafe)/Cafe (Main Area)/floor.png"
-dest_files=["res://.godot/imported/floor.png-e05e6670e74b7e112bcb4415a3e51b30.ctex"]
+source_file="res://assets/game (cafe)/Cafe (Main Area)/cashier.png"
+dest_files=["res://.godot/imported/cashier.png-11768e619db222827541470eb961b602.ctex"]
 
 [params]
 

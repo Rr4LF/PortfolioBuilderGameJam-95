@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgj7xhk8bkktf"
-path="res://.godot/imported/door.png-3a30a838a531c7824e0e738f0f6a5084.ctex"
+uid="uid://box3atlknqveo"
+path="res://.godot/imported/shelf.png-26d1f9ff67069fce94c272801f4f8ee8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/during_shift (cafe)/Cafe (Main Area)/door.png"
-dest_files=["res://.godot/imported/door.png-3a30a838a531c7824e0e738f0f6a5084.ctex"]
+source_file="res://assets/game (cafe)/Cafe (Main Area)/shelf.png"
+dest_files=["res://.godot/imported/shelf.png-26d1f9ff67069fce94c272801f4f8ee8.ctex"]
 
 [params]
 
