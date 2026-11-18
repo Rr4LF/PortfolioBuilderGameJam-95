@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://bpb3ljaix564j"]
 
 [ext_resource type="Script" uid="uid://pcd7gxt3tdsf" path="res://scripts/game.gd" id="1_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://c8vm8r83uuot7" path="res://assets/UI Chalk/UI_Button_Chalk-16.png" id="2_lbhrr"]
-[ext_resource type="Texture2D" uid="uid://f0t0f42r16l" path="res://assets/UI Chalk/UI_Button_Chalk-2.png" id="2_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://dapj5306rlfy6" path="res://assets/game (cafe)/UI/home.png" id="2_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://dpklpi5gjlpk8" path="res://assets/game (cafe)/UI/home_pressed.png" id="3_gee14"]
+[ext_resource type="Texture2D" uid="uid://c13moj08vk7jx" path="res://assets/game (cafe)/UI/home_hover.png" id="4_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://bnrad23rfs3mo" path="res://assets/main_menu/options.png" id="5_vtaks"]
+[ext_resource type="Texture2D" uid="uid://ci2uyvhqhantm" path="res://assets/main_menu/options_pressed.png" id="6_kvpfn"]
+[ext_resource type="Texture2D" uid="uid://brynoxu7f5x4m" path="res://assets/main_menu/options_hover.png" id="7_dinhu"]
 
 [node name="game" type="Node2D" unique_id=1119949611]
 script = ExtResource("1_lnu2h")
@@ -15,23 +19,25 @@ offset_bottom = 40.0
 
 [node name="main_menu" type="TextureButton" parent="button_manager" unique_id=625454958]
 layout_mode = 0
-offset_left = 413.0
-offset_top = 246.0
-offset_right = 596.0
-offset_bottom = 419.0
-texture_normal = ExtResource("2_lbhrr")
-texture_pressed = ExtResource("2_lbhrr")
+offset_left = 172.0
+offset_top = 27.0
+offset_right = 280.0
+offset_bottom = 135.0
+texture_normal = ExtResource("2_u5sy4")
+texture_pressed = ExtResource("3_gee14")
+texture_hover = ExtResource("4_0tnpc")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="options" type="TextureButton" parent="button_manager" unique_id=107981320]
 layout_mode = 0
-offset_left = 36.0
-offset_top = 42.0
-offset_right = 142.0
-offset_bottom = 150.0
-texture_normal = ExtResource("2_lnu2h")
-texture_hover = ExtResource("2_lnu2h")
+offset_left = 35.0
+offset_top = 27.0
+offset_right = 143.0
+offset_bottom = 135.0
+texture_normal = ExtResource("5_vtaks")
+texture_pressed = ExtResource("6_kvpfn")
+texture_hover = ExtResource("7_dinhu")
 ignore_texture_size = true
 stretch_mode = 0
 
