@@ -21,7 +21,7 @@ grow_vertical = 2
 scale = Vector2(1.15, 1.15)
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 7.23
+size_flags_stretch_ratio = 5.05
 offset_transform_scale = Vector2(1.075, 1.075)
 script = ExtResource("1_spx6g")
 
