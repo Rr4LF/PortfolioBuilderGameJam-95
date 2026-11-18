@@ -48,13 +48,13 @@ scale = Vector2(0.7314815, 0.6908397)
 texture = ExtResource("4_fq5ur")
 
 [node name="card_container" type="GridContainer" parent="." unique_id=630697844]
-layout_mode = 0
+layout_mode = 1
 offset_left = 329.0
 offset_top = 117.0
 offset_right = 890.0
 offset_bottom = 673.0
-theme_override_constants/h_separation = 15
-theme_override_constants/v_separation = 15
-columns = 4
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 60
+columns = 3
 
 [connection signal="pressed" from="button_manager/back_button" to="." method="_on_back_button_pressed"]

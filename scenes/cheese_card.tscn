@@ -4,54 +4,77 @@
 [ext_resource type="Script" uid="uid://dtxlcusrddg3l" path="res://scripts/cheese_card.gd" id="1_spx6g"]
 
 [node name="cheese_card" type="Control" unique_id=1263067061]
-custom_minimum_size = Vector2(100, 150)
-custom_maximum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(0, 160)
+propagate_maximum_size = true
 layout_mode = 3
-anchors_preset = 0
-offset_left = 36.0
-offset_top = 49.0
-offset_right = 186.0
-offset_bottom = 249.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -354.0
+offset_right = -402.9565
+offset_bottom = -124.43477
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.15, 1.15)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 7.23
+offset_transform_scale = Vector2(1.075, 1.075)
 script = ExtResource("1_spx6g")
 
 [node name="card_bg" type="TextureRect" parent="." unique_id=1675100574]
-custom_maximum_size = Vector2(200, 250)
+propagate_maximum_size = true
 layout_mode = 0
-offset_left = 20.0
-offset_top = 31.0
-offset_right = 135.0
-offset_bottom = 161.0
+offset_top = 13.043479
+offset_right = 150.0
+offset_bottom = 183.04347
+scale = Vector2(1.15, 1.15)
+offset_transform_scale = Vector2(1.075, 1.075)
 texture = ExtResource("1_3tod1")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="title" type="Label" parent="." unique_id=161973430]
+propagate_maximum_size = true
+clip_contents = true
 layout_mode = 0
-offset_left = 31.0
-offset_top = 55.0
-offset_right = 125.0
-offset_bottom = 67.0
-theme_override_font_sizes/font_size = 8
+offset_left = 33.04348
+offset_top = 48.69566
+offset_right = 127.04348
+offset_bottom = 65.69566
+scale = Vector2(1.15, 1.15)
+offset_transform_scale = Vector2(1.075, 1.075)
+theme_override_font_sizes/font_size = 12
 text = "lorem ipsum"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="card_art" type="TextureRect" parent="." unique_id=1720420690]
+propagate_maximum_size = true
 layout_mode = 0
-offset_left = 45.0
-offset_top = 75.0
-offset_right = 112.0
-offset_bottom = 135.0
+offset_left = 31.304348
+offset_top = 86.95653
+offset_right = 124.32529
+offset_bottom = 169.845
+scale = Vector2(1.15, 1.15)
+offset_transform_scale = Vector2(1.075, 1.075)
 expand_mode = 1
 stretch_mode = 5
 
 [node name="card_cost" type="Label" parent="." unique_id=1368011744]
+propagate_maximum_size = true
+clip_contents = true
 layout_mode = 0
-offset_left = 51.0
-offset_top = 35.0
-offset_right = 105.0
-offset_bottom = 49.0
-theme_override_font_sizes/font_size = 9
+offset_left = 40.86956
+offset_top = 19.130438
+offset_right = 120.86956
+offset_bottom = 39.13044
+scale = Vector2(1.15, 1.15)
+offset_transform_scale = Vector2(1.075, 1.075)
+theme_override_font_sizes/font_size = 14
 text = "Placeholder"
 horizontal_alignment = 1
 vertical_alignment = 1

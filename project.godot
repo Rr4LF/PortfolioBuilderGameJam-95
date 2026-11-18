@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CheeseGame"
-run/main_scene="uid://bpb3ljaix564j"
+run/main_scene="uid://biya1c7cyk8jm"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
