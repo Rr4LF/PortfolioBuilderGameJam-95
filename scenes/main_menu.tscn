@@ -12,10 +12,112 @@
 [ext_resource type="Script" uid="uid://dbedgdkyxirul" path="res://scenes/toggle_sound.gd" id="8_5dd4i"]
 [ext_resource type="Texture2D" uid="uid://dt14u2qq5nyep" path="res://assets/main_menu/close_hover.png" id="8_7b55j"]
 [ext_resource type="Texture2D" uid="uid://durv38ywn5orm" path="res://assets/main_menu/unmuted_hover.png" id="8_lgwnu"]
-[ext_resource type="Texture2D" uid="uid://ject40ja64ul" path="res://assets/main_menu/bg main menuB.png" id="15_j7ex8"]
-[ext_resource type="Texture2D" uid="uid://h3hhk8qop3mm" path="res://assets/main_menu/door_main_hover.png" id="16_5pajh"]
+[ext_resource type="Texture2D" uid="uid://dut5rnt5ye20y" path="res://assets/main_menu/bg main menu.png" id="12_j7ex8"]
+[ext_resource type="FontFile" uid="uid://dhcykmflpv13r" path="res://assets/fonts/Matcha Style.otf" id="14_a8gd2"]
+[ext_resource type="FontFile" uid="uid://dq1hqamap8274" path="res://assets/fonts/Stay With Me.otf" id="15_hstxw"]
+[ext_resource type="Texture2D" uid="uid://d2wbhnbrxxhi6" path="res://assets/main_menu/door_main_hover.png" id="16_5pajh"]
 [ext_resource type="Script" uid="uid://fgumpkhllrnq" path="res://scenes/bg.gd" id="17_a8gd2"]
 [ext_resource type="FontFile" uid="uid://dg51bhna3oedg" path="res://assets/fonts/Pulang.otf" id="17_hstxw"]
+[ext_resource type="Texture2D" uid="uid://d3y3ljlhgepk7" path="res://assets/main_menu/open.png" id="17_j7ex8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7ex8"]
+atlas = ExtResource("17_j7ex8")
+region = Rect2(0, 0, 160, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8gd2"]
+atlas = ExtResource("17_j7ex8")
+region = Rect2(160, 0, 160, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hstxw"]
+atlas = ExtResource("17_j7ex8")
+region = Rect2(320, 0, 160, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8egab"]
+atlas = ExtResource("17_j7ex8")
+region = Rect2(480, 0, 160, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw5y6"]
+atlas = ExtResource("17_j7ex8")
+region = Rect2(640, 0, 160, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svtp6"]
+atlas = ExtResource("17_j7ex8")
+region = Rect2(800, 0, 160, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dfpl"]
+atlas = ExtResource("17_j7ex8")
+region = Rect2(0, 333, 160, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qywvv"]
+atlas = ExtResource("17_j7ex8")
+region = Rect2(160, 333, 160, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wgol"]
+atlas = ExtResource("17_j7ex8")
+region = Rect2(320, 333, 160, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1acrt"]
+atlas = ExtResource("17_j7ex8")
+region = Rect2(480, 333, 160, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr8o3"]
+atlas = ExtResource("17_j7ex8")
+region = Rect2(640, 333, 160, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a85y"]
+atlas = ExtResource("17_j7ex8")
+region = Rect2(800, 333, 160, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl5e0"]
+atlas = ExtResource("17_j7ex8")
+region = Rect2(0, 666, 160, 333)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xndmy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7ex8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8gd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hstxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8egab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gw5y6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svtp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dfpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qywvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wgol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1acrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vr8o3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1a85y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl5e0")
+}],
+"loop": 0,
+"name": &"door",
+"speed": 5.0
+}]
 
 [node name="Main Menu" type="Node2D" unique_id=469634825]
 script = ExtResource("1_8ln24")
@@ -72,40 +174,53 @@ metadata/_edit_use_anchors_ = true
 
 [node name="bg" type="Sprite2D" parent="." unique_id=737842910]
 z_index = -10
-position = Vector2(679, 489)
+position = Vector2(667, 482.00003)
 scale = Vector2(0.4665731, 0.46657315)
-texture = ExtResource("15_j7ex8")
+texture = ExtResource("12_j7ex8")
 script = ExtResource("17_a8gd2")
 
+[node name="title" type="Label" parent="bg" unique_id=1171750081]
+offset_left = -1054.4972
+offset_top = -681.5652
+offset_right = 385.7915
+offset_bottom = -405.08127
+rotation = 0.116937056
+theme_override_colors/font_color = Color(1, 0.95686275, 0.6901961, 1)
+theme_override_fonts/font = ExtResource("14_a8gd2")
+theme_override_font_sizes/font_size = 203
+text = "Insert Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="credits" type="Label" parent="bg" unique_id=1896370873]
-offset_left = 267.91086
-offset_top = -126.453896
-offset_right = 477.91086
-offset_bottom = -54.453896
+offset_left = 270.05402
+offset_top = -139.31361
+offset_right = 480.05402
+offset_bottom = -43.313614
 theme_override_colors/font_color = Color(0.99607843, 0.8745098, 0.72156864, 1)
-theme_override_fonts/font = ExtResource("17_hstxw")
-theme_override_font_sizes/font_size = 49
+theme_override_fonts/font = ExtResource("15_hstxw")
+theme_override_font_sizes/font_size = 76
 text = "More on"
 
 [node name="credits" type="Label" parent="bg/credits" unique_id=2018816636]
 layout_mode = 0
-offset_left = 107.16436
-offset_top = 147.8868
-offset_right = 169.31976
-offset_bottom = 219.8868
+offset_left = 109.30765
+offset_top = 150.03008
+offset_right = 171.46304
+offset_bottom = 238.03008
 theme_override_colors/font_color = Color(0.99607843, 0.8745098, 0.72156864, 1)
-theme_override_fonts/font = ExtResource("17_hstxw")
-theme_override_font_sizes/font_size = 49
+theme_override_fonts/font = ExtResource("15_hstxw")
+theme_override_font_sizes/font_size = 70
 text = "&"
 
 [node name="link_button_asteriskish" type="LinkButton" parent="bg" unique_id=207453359]
-offset_left = 297.91687
-offset_top = -70.72849
-offset_right = 501.91687
-offset_bottom = 25.271507
+offset_left = 291.48688
+offset_top = -79.301636
+offset_right = 495.48688
+offset_bottom = 19.698364
 theme_override_colors/font_color = Color(0.99607843, 0.8745098, 0.72156864, 1)
 theme_override_fonts/font = ExtResource("17_hstxw")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 75
 text = "aster"
 underline = 1
 uri = "https://bsky.app/profile/rr4lf.bsky.social"
@@ -113,13 +228,13 @@ script = ExtResource("5_rtw2f")
 metadata/_edit_use_anchors_ = true
 
 [node name="link_button_Rr4lF" type="LinkButton" parent="bg" unique_id=1120280747]
-offset_left = 330.06616
-offset_top = 75.01503
-offset_right = 534.06616
-offset_bottom = 172.01503
+offset_left = 325.77945
+offset_top = 72.87174
+offset_right = 529.7794
+offset_bottom = 171.87173
 theme_override_colors/font_color = Color(0.99761885, 0.8732259, 0.722715, 1)
 theme_override_fonts/font = ExtResource("17_hstxw")
-theme_override_font_sizes/font_size = 71
+theme_override_font_sizes/font_size = 75
 text = "Rr4lF"
 underline = 1
 uri = "https://bsky.app/profile/rr4lf.bsky.social"
@@ -127,16 +242,25 @@ script = ExtResource("5_rtw2f")
 metadata/_edit_use_anchors_ = true
 
 [node name="start" type="TextureButton" parent="bg" unique_id=966121635]
+z_index = 3
 anchors_preset = -1
-anchor_right = 0.055372562
-anchor_bottom = 0.1984159
-offset_left = 672.99207
+anchor_right = 0.054971226
+anchor_bottom = 0.19708368
+offset_left = 675.1354
 offset_top = -548.68164
-offset_right = 889.62244
+offset_right = 891.76575
 offset_bottom = -126.990295
 texture_hover = ExtResource("16_5pajh")
+ignore_texture_size = true
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
+
+[node name="door" type="AnimatedSprite2D" parent="bg" unique_id=1855584070]
+position = Vector2(892.3384, -78.84326)
+scale = Vector2(2.929373, 2.9248312)
+sprite_frames = SubResource("SpriteFrames_xndmy")
+animation = &"door"
+speed_scale = 1.5
 
 [connection signal="pressed" from="Button_manager/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Button_manager/quit" to="." method="_on_quit_pressed"]
