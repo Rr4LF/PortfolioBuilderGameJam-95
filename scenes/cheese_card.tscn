@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://blc3pu37xt1qt" path="res://assets/between_shifts (cheesemaking)/UI/card_container.png" id="1_3tod1"]
 [ext_resource type="Script" uid="uid://dtxlcusrddg3l" path="res://scripts/cheese_card.gd" id="1_spx6g"]
+[ext_resource type="FontFile" uid="uid://dq1hqamap8274" path="res://assets/fonts/Stay With Me.otf" id="3_0607a"]
+[ext_resource type="FontFile" uid="uid://8a7om4fvpckg" path="res://assets/fonts/Hey Comic.ttf" id="4_ofvy4"]
+[ext_resource type="Texture2D" uid="uid://d3iei0k3dy6m0" path="res://assets/between_shifts (cheesemaking)/UI/energy.png" id="5_urcsr"]
 
 [node name="cheese_card" type="Control" unique_id=1263067061]
 custom_minimum_size = Vector2(0, 160)
@@ -41,13 +44,14 @@ stretch_mode = 5
 propagate_maximum_size = true
 clip_contents = true
 layout_mode = 0
-offset_left = 33.04348
-offset_top = 48.69566
-offset_right = 127.04348
-offset_bottom = 65.69566
+offset_left = 20.0
+offset_top = 46.086964
+offset_right = 134.93384
+offset_bottom = 70.08696
 scale = Vector2(1.15, 1.15)
 offset_transform_scale = Vector2(1.075, 1.075)
-theme_override_font_sizes/font_size = 12
+theme_override_fonts/font = ExtResource("3_0607a")
+theme_override_font_sizes/font_size = 18
 text = "lorem ipsum"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -70,11 +74,18 @@ clip_contents = true
 layout_mode = 0
 offset_left = 40.86956
 offset_top = 19.130438
-offset_right = 120.86956
+offset_right = 82.457466
 offset_bottom = 39.13044
 scale = Vector2(1.15, 1.15)
 offset_transform_scale = Vector2(1.075, 1.075)
+theme_override_fonts/font = ExtResource("4_ofvy4")
 theme_override_font_sizes/font_size = 14
-text = "Placeholder"
-horizontal_alignment = 1
+text = "val"
+horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="Energy" type="Sprite2D" parent="." unique_id=993247152]
+modulate = Color(1.5593944, 1.5593944, 1.5593944, 1)
+position = Vector2(103.23912, 30.434788)
+scale = Vector2(0.1493559, 0.13715565)
+texture = ExtResource("5_urcsr")
