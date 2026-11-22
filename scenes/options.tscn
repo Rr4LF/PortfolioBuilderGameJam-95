@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bqnl43o3gyq76" path="res://scripts/options.gd" id="1_yjkok"]
 [ext_resource type="Texture2D" uid="uid://baemiofsdibr5" path="res://assets/main_menu/back.png" id="2_2iy26"]
+[ext_resource type="FontFile" uid="uid://dhcykmflpv13r" path="res://assets/fonts/Matcha Style.otf" id="3_2iy26"]
 
-[node name="Options" type="Node2D" unique_id=1850309680]
+[node name="Options" type="Control" unique_id=1136130875]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_yjkok")
 
 [node name="button_manager" type="Control" parent="." unique_id=1152791666]
-layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -23,5 +25,34 @@ texture_pressed = ExtResource("2_2iy26")
 texture_hover = ExtResource("2_2iy26")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="between_shifts_bg" type="ColorRect" parent="." unique_id=344673425]
+z_index = -4096
+layout_mode = 0
+offset_left = -58.0
+offset_top = -42.0
+offset_right = 1345.0
+offset_bottom = 787.0
+color = Color(0.0016140813, 0.027775723, 0.0947412, 1)
+
+[node name="music_slider" type="HSlider" parent="." unique_id=868393990]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 117.0
+offset_right = 847.0
+offset_bottom = 281.0
+max_value = 1.0
+step = 0.01
+value = 0.05
+
+[node name="music_label" type="Label" parent="." unique_id=1293700407]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 234.0
+offset_right = 778.0
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_2iy26")
+theme_override_font_sizes/font_size = 40
 
 [connection signal="pressed" from="button_manager/back_button" to="." method="_on_back_button_pressed"]
