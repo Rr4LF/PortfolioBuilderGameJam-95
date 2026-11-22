@@ -161,4 +161,11 @@ theme_override_constants/h_separation = -6
 theme_override_constants/v_separation = 60
 columns = 4
 
+[node name="selected_list" type="VBoxContainer" parent="." unique_id=1163047600]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 153.0
+offset_right = 1197.0
+offset_bottom = 454.0
+
 [connection signal="pressed" from="button_manager/back_button" to="." method="_on_back_button_pressed"]

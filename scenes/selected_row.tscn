@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ck8bmp7ccap7w"]
+
+[ext_resource type="Script" uid="uid://ds5v5x30dr6q1" path="res://scripts/selected_row.gd" id="1_tylkm"]
+[ext_resource type="FontFile" uid="uid://dg51bhna3oedg" path="res://assets/fonts/Pulang.otf" id="2_8mtg0"]
+[ext_resource type="FontFile" uid="uid://dhcykmflpv13r" path="res://assets/fonts/Matcha Style.otf" id="2_tylkm"]
+
+[node name="selected_row" type="HBoxContainer" unique_id=1375246028]
+script = ExtResource("1_tylkm")
+
+[node name="icon" type="TextureRect" parent="." unique_id=120364534]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="name_label" type="Label" parent="." unique_id=1665268803]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_8mtg0")
+theme_override_font_sizes/font_size = 20
+
+[node name="count_label" type="Label" parent="." unique_id=55012604]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_tylkm")

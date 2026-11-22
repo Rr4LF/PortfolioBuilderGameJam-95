@@ -10,9 +10,11 @@ func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 const CHEESE_CARD_SCENE = preload("res://scenes/cheese_card.tscn")
+const SELECTED_ROW_SCENE = preload("res://scenes/selected_row.tscn")
 
 @onready var card_scroll_container: ScrollContainer = $card_scroll_container
 @onready var card_container: GridContainer = $card_scroll_container/card_margin/card_container
+@onready var selected_list: VBoxContainer = $selected_list
 
 var v_scrollbar: VScrollBar
 var hide_timer: Timer
@@ -94,6 +96,7 @@ func _ready() -> void:
 	populate_menu()
 	_setup_auto_hide_scrollbar()
 	card_scroll_container.gui_input.connect(_on_scroll_gui_input)
+	_update_selected_list()
 
 ## Populates the between_shifts_menu with all available cheeses in the Dictionary
 func populate_menu() -> void:
@@ -135,6 +138,7 @@ func _on_card_selected(cheese_info: Dictionary) -> void:
 	# Update both the card's count badge and the energy display
 	spawned_cards[title].set_count(selected_counts[title])
 	_update_energy_ui()
+	_update_selected_list()
 
 ## Called when a card is right-clicked: decreases cheese count and refunds energy
 func _on_card_deselected(cheese_info: Dictionary) -> void:
@@ -151,11 +155,26 @@ func _on_card_deselected(cheese_info: Dictionary) -> void:
 	# Update both the card's count badge and the energy display
 	spawned_cards[title].set_count(selected_counts[title])
 	_update_energy_ui()
+	_update_selected_list()
 
 ## Updates the energy label text with the current remaining energy
 func _update_energy_ui() -> void:
 	if energy_label is Label:
 		energy_label.text = str(total_energy)
+
+## Creates a summary list of all selected cheeses
+func _update_selected_list() -> void:
+	for child in selected_list.get_children():
+		child.queue_free()
+
+	for cheese_info in cheese_menu:
+		var title: String = cheese_info.get("title", "Unknown")
+		var count: int = selected_counts.get(title, 0)
+
+		if count > 0:
+			var new_row: SelectedRowUI = SELECTED_ROW_SCENE.instantiate()
+			selected_list.add_child(new_row)
+			new_row.set_row_data(cheese_info, count)
 
 # sets a half second timer to hide scrollbar
 func _setup_auto_hide_scrollbar() -> void:
