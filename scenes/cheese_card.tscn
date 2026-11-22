@@ -36,6 +36,7 @@ offset_right = 150.0
 offset_bottom = 183.04347
 scale = Vector2(1.15, 1.15)
 offset_transform_scale = Vector2(1.075, 1.075)
+mouse_filter = 2
 texture = ExtResource("1_3tod1")
 expand_mode = 1
 stretch_mode = 5
@@ -65,6 +66,7 @@ offset_right = 124.32529
 offset_bottom = 169.845
 scale = Vector2(1.15, 1.15)
 offset_transform_scale = Vector2(1.075, 1.075)
+mouse_filter = 2
 expand_mode = 1
 stretch_mode = 5
 
@@ -89,3 +91,15 @@ modulate = Color(1.5593944, 1.5593944, 1.5593944, 1)
 position = Vector2(103.23912, 30.434788)
 scale = Vector2(0.1493559, 0.13715565)
 texture = ExtResource("5_urcsr")
+
+[node name="count_label" type="Label" parent="." unique_id=1738432990]
+layout_mode = 0
+offset_left = 27.826088
+offset_top = 173.91304
+offset_right = 147.82608
+offset_bottom = 200.91304
+theme_override_fonts/font = ExtResource("4_ofvy4")
+theme_override_font_sizes/font_size = 20
+text = "Make Cheese"
+horizontal_alignment = 1
+vertical_alignment = 1

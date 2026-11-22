@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://baemiofsdibr5" path="res://assets/main_menu/back.png" id="2_dj0l6"]
 [ext_resource type="Texture2D" uid="uid://0wvm7fdiq1d6" path="res://assets/between_shifts (cheesemaking)/UI/frame.png" id="3_tsr06"]
 [ext_resource type="Texture2D" uid="uid://d3iei0k3dy6m0" path="res://assets/between_shifts (cheesemaking)/UI/energy.png" id="4_fq5ur"]
+[ext_resource type="FontFile" uid="uid://dg51bhna3oedg" path="res://assets/fonts/Pulang.otf" id="5_xgege"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_fq5ur"]
 
@@ -125,6 +126,15 @@ texture = ExtResource("3_tsr06")
 position = Vector2(1040, 67)
 scale = Vector2(0.57175916, 0.5399918)
 texture = ExtResource("4_fq5ur")
+
+[node name="energy_label" type="Label" parent="total_energy" unique_id=786625278]
+offset_left = 83.95145
+offset_top = -90.74212
+offset_right = 164.40494
+offset_bottom = 79.25788
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_xgege")
+theme_override_font_sizes/font_size = 130
 
 [node name="card_scroll_container" type="ScrollContainer" parent="." unique_id=407124004]
 layout_mode = 0

@@ -1,5 +1,10 @@
 extends Control
 
+# Starting energy it is adjustable in Inspector
+@export var starting_energy: int = 20
+# Remaining energy as the player picks or removes cheeses
+var total_energy: int = 20
+
 ## Back button that leads back to main menu
 func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
@@ -14,6 +19,13 @@ var hide_timer: Timer
 var fade_tween: Tween
 var scroll_tween: Tween
 var target_scroll_y: float = 0.0
+
+# Tracks how many of each cheese have been chosen
+var selected_counts: Dictionary = {}
+# Keeps references to each spawned card via title
+var spawned_cards: Dictionary = {}
+# Displays the current remaining energy
+@onready var energy_label: Label = $total_energy/energy_label
 
 ## Dictionary containing all available cheeses
 var cheese_menu: Array[Dictionary] = [
@@ -74,21 +86,76 @@ var cheese_menu: Array[Dictionary] = [
 	}
 ]
 
-## Runs populate_menu() when scene is loaded
+## Initializes the menu when the scene loads
 func _ready() -> void:
+	total_energy = starting_energy
+	_update_energy_ui()
+	
 	populate_menu()
 	_setup_auto_hide_scrollbar()
 	card_scroll_container.gui_input.connect(_on_scroll_gui_input)
 
 ## Populates the between_shifts_menu with all available cheeses in the Dictionary
 func populate_menu() -> void:
+# Remove any old cards before rebuilding the list
 	for child in card_container.get_children():
 		child.queue_free()
+		
+	# Reset tracking for a fresh menu
+	spawned_cards.clear()
+	selected_counts.clear()
 	
+	# Spawn a card for every cheese entry in cheese_menu
 	for cheese_info in cheese_menu:
+		var title: String = cheese_info.get("title", "Unknown")
+		selected_counts[title] = 0 # Make this cheese's picked count 0
+		
 		var new_card: cheeseCardUI = CHEESE_CARD_SCENE.instantiate()
 		card_container.add_child(new_card)
 		new_card.set_card_data(cheese_info)
+		
+		# Connect card click signals to handler functions in this menu
+		new_card.card_selected.connect(_on_card_selected)
+		new_card.card_deselected.connect(_on_card_deselected)
+		
+		spawned_cards[title] = new_card
+
+## Called when a card is left-clicked: increases cheese count and spends energy
+func _on_card_selected(cheese_info: Dictionary) -> void:
+	var title: String = cheese_info.get("title", "Unknown")
+	var cost: int = cheese_info.get("cost", 0)
+	
+	# Stop if the player doesn't have enough energy left to afford this cheese
+	if total_energy < cost:
+		return
+		
+	selected_counts[title] += 1 # Increment count for this specific cheese
+	total_energy -= cost # Deduct cheese cost from total energy
+	
+	# Update both the card's count badge and the energy display
+	spawned_cards[title].set_count(selected_counts[title])
+	_update_energy_ui()
+
+## Called when a card is right-clicked: decreases cheese count and refunds energy
+func _on_card_deselected(cheese_info: Dictionary) -> void:
+	var title: String = cheese_info.get("title", "Unknown")
+	var cost: int = cheese_info.get("cost", 0)
+	
+	# Do nothing if none of this cheese are currently selected
+	if selected_counts.get(title, 0) <= 0:
+		return
+		
+	selected_counts[title] -= 1 # Decrement count for this specific cheese
+	total_energy += cost # Refund cheese cost back to total energy
+	
+	# Update both the card's count badge and the energy display
+	spawned_cards[title].set_count(selected_counts[title])
+	_update_energy_ui()
+
+## Updates the energy label text with the current remaining energy
+func _update_energy_ui() -> void:
+	if energy_label is Label:
+		energy_label.text = str(total_energy)
 
 # sets a half second timer to hide scrollbar
 func _setup_auto_hide_scrollbar() -> void:
