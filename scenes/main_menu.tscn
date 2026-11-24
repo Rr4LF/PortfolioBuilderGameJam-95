@@ -182,13 +182,13 @@ script = ExtResource("17_a8gd2")
 [node name="title" type="Label" parent="bg" unique_id=1171750081]
 offset_left = -1054.4972
 offset_top = -681.5652
-offset_right = 385.7915
-offset_bottom = -405.08127
+offset_right = 387.51685
+offset_bottom = -405.08118
 rotation = 0.116937056
 theme_override_colors/font_color = Color(1, 0.95686275, 0.6901961, 1)
 theme_override_fonts/font = ExtResource("14_a8gd2")
-theme_override_font_sizes/font_size = 203
-text = "Insert Name"
+theme_override_font_sizes/font_size = 243
+text = "Keso Cafe"
 horizontal_alignment = 1
 vertical_alignment = 1
 
